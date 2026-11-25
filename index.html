@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brightcode — Web development for businesses that want to grow</title>
+  <meta name="description" content="Independent web studio. I build new products from scratch, automate routine work, help local businesses get online, and bring existing projects back to life.">
+  <meta name="theme-color" content="#0b0d12">
+  <meta property="og:title" content="Brightcode — Web development studio">
+  <meta property="og:description" content="New builds, automation, support and optimization for web projects.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%237c5cff'/%3E%3Cpath d='M12 10l-6 6 6 6M20 10l6 6-6 6' stroke='white' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap&subset=cyrillic,latin-ext" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Apply saved theme before paint to avoid a flash
+    try {
+      var t = localStorage.getItem('theme');
+      if (t) document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+  <!-- ============ Header ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#top" class="logo" aria-label="Brightcode">
+        <span class="logo__mark" aria-hidden="true">&lt;/&gt;</span>
+        <span class="logo__text">Brightcode</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Main">
+        <ul class="nav__list">
+          <li><a href="#services" class="nav__link" data-i18n="nav.services">Services</a></li>
+          <li><a href="#process" class="nav__link" data-i18n="nav.process">Process</a></li>
+          <li><a href="#about" class="nav__link" data-i18n="nav.about">About</a></li>
+          <li><a href="#faq" class="nav__link" data-i18n="nav.faq">FAQ</a></li>
+          <li class="nav__cta-item"><a href="#contact" class="btn btn--primary btn--sm" data-i18n="nav.cta">Start a project</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <div class="lang" id="lang">
+          <button class="lang__btn" id="langBtn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Language">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+            <span id="langCurrent">EN</span>
+          </button>
+          <ul class="lang__menu" id="langMenu" role="listbox" aria-label="Language">
+            <li><button type="button" role="option" data-lang="en">English <span>EN</span></button></li>
+            <li><button type="button" role="option" data-lang="ru">Русский <span>RU</span></button></li>
+            <li><button type="button" role="option" data-lang="lv">Latviešu <span>LV</span></button></li>
+          </ul>
+        </div>
+        <button class="icon-btn" id="themeToggle" type="button" data-i18n-aria="aria.theme" aria-label="Toggle color theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="icon-btn burger" id="burger" type="button" data-i18n-aria="aria.menu" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ Hero ============ -->
+    <section class="hero" id="top">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="eyebrow reveal"><span class="dot"></span> <span data-i18n="hero.badge">Available for new projects</span></p>
+          <h1 class="hero__title reveal" data-i18n="hero.title">Web products that <span class="gradient-text">work for your business</span>, not the other way around.</h1>
+          <p class="hero__lead reveal" data-i18n="hero.lead">I'm a full-stack developer with 6+ years of experience. I build new products from scratch, automate the routine, help local businesses get online, and bring tired projects back to life.</p>
+          <div class="hero__actions reveal">
+            <a href="#contact" class="btn btn--primary btn--lg">
+              <span data-i18n="hero.cta">Discuss your project</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="#services" class="btn btn--ghost btn--lg" data-i18n="hero.cta2">See services</a>
+          </div>
+          <ul class="hero__stats reveal">
+            <li><strong>6+</strong><span data-i18n="hero.stat1">years in web</span></li>
+            <li><strong>40+</strong><span data-i18n="hero.stat2">projects shipped</span></li>
+            <li><strong>24h</strong><span data-i18n="hero.stat3">reply time</span></li>
+          </ul>
+        </div>
+
+        <div class="hero__visual reveal" aria-hidden="true">
+          <div class="code-card">
+            <div class="code-card__bar">
+              <span></span><span></span><span></span>
+              <em>project.ts</em>
+            </div>
+<pre class="code-card__body"><code><span class="k">const</span> project = <span class="k">await</span> brightcode.<span class="f">start</span>({
+  goal: <span class="s">'grow the business'</span>,
+  stack: [<span class="s">'Next.js'</span>, <span class="s">'Adonis'</span>, <span class="s">'Postgres'</span>],
+  automate: <span class="b">true</span>,
+});
+
+project.<span class="f">ship</span>();   <span class="c">// ✓ fast, tested, documented</span>
+project.<span class="f">support</span>(); <span class="c">// ✓ long after launch</span></code></pre>
+          </div>
+          <div class="float-chip float-chip--1">
+            <span class="chip-icon">⚡</span> Lighthouse 98
+          </div>
+          <div class="float-chip float-chip--2">
+            <span class="chip-icon">⏱</span> <span data-i18n="hero.chip">−12h/week manual work</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Marquee ============ -->
+    <section class="stack-strip" aria-label="Technologies">
+      <div class="marquee">
+        <div class="marquee__track">
+          <span>Next.js</span><span>React</span><span>TypeScript</span><span>Node.js</span><span>AdonisJS</span><span>PostgreSQL</span><span>REST &amp; GraphQL</span><span>Docker</span><span>CI/CD</span><span>Stripe</span><span>API</span>
+          <span aria-hidden="true">Next.js</span><span aria-hidden="true">React</span><span aria-hidden="true">TypeScript</span><span aria-hidden="true">Node.js</span><span aria-hidden="true">AdonisJS</span><span aria-hidden="true">PostgreSQL</span><span aria-hidden="true">REST &amp; GraphQL</span><span aria-hidden="true">Docker</span><span aria-hidden="true">CI/CD</span><span aria-hidden="true">Stripe</span><span aria-hidden="true">API</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Services ============ -->
+    <section class="section" id="services">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow" data-i18n="services.eyebrow">Services</p>
+          <h2 class="section__title" data-i18n="services.title">Everything your project needs, from idea to the next big release</h2>
+          <p class="section__lead" data-i18n="services.lead">Pick one service or combine them. Every engagement starts with understanding your business, not with writing code.</p>
+        </header>
+
+        <div class="services">
+          <article class="service-card reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l1.5-5h15L21 9"/><path d="M3 9h18v2a3 3 0 0 1-6 0 3 3 0 0 1-6 0 3 3 0 0 1-6 0z"/><path d="M5 13v7h14v-7"/><path d="M10 20v-4h4v4"/></svg>
+            </div>
+            <h3 data-i18n="s1.title">Local business</h3>
+            <p data-i18n="s1.text">Websites, booking, online menus and catalogs that bring customers through the door. Simple to manage, fast on every phone.</p>
+            <ul class="tags" data-i18n="s1.tags"><li>Websites</li><li>Booking</li><li>Local SEO</li></ul>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="4"/><path d="M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg>
+            </div>
+            <h3 data-i18n="s2.title">Work automation</h3>
+            <p data-i18n="s2.text">Stop copying data between spreadsheets. I connect your tools, build internal dashboards and scripts that save hours every week.</p>
+            <ul class="tags" data-i18n="s2.tags"><li>Integrations</li><li>Dashboards</li><li>Bots</li></ul>
+          </article>
+
+          <article class="service-card service-card--featured reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 16.5 6.5 19.5l1-6.3L3 8.9 9 8z"/></svg>
+            </div>
+            <h3 data-i18n="s3.title">Projects from scratch</h3>
+            <p data-i18n="s3.text">From idea to production: product discovery, architecture, design handoff, frontend, backend, database and deployment.</p>
+            <ul class="tags" data-i18n="s3.tags"><li>MVP</li><li>SaaS</li><li>Web apps</li></ul>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-.5-.5-2.5z"/></svg>
+            </div>
+            <h3 data-i18n="s4.title">Support &amp; extend</h3>
+            <p data-i18n="s4.text">Already have a product? I'll join as your developer: fix bugs, ship new features, and keep dependencies and infrastructure healthy.</p>
+            <ul class="tags" data-i18n="s4.tags"><li>New features</li><li>Bug fixing</li><li>Maintenance</li></ul>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg>
+            </div>
+            <h3 data-i18n="s5.title">Optimization</h3>
+            <p data-i18n="s5.text">Slow pages and heavy queries cost money. I profile, fix bottlenecks and improve Core Web Vitals, database and API performance.</p>
+            <ul class="tags" data-i18n="s5.tags"><li>Performance</li><li>SQL</li><li>Core Web Vitals</li></ul>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21.2l8.8-8.8a5.5 5.5 0 0 0 0-7.8z"/><path d="M3 12h4l2-3 3 6 2-3h7"/></svg>
+            </div>
+            <h3 data-i18n="s6.title">Bring projects back to life</h3>
+            <p data-i18n="s6.text">Abandoned code, a developer who disappeared, outdated stack? I audit, stabilize and modernize it so it can grow again.</p>
+            <ul class="tags" data-i18n="s6.tags"><li>Code audit</li><li>Refactoring</li><li>Upgrades</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Process ============ -->
+    <section class="section section--alt" id="process">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow" data-i18n="process.eyebrow">Process</p>
+          <h2 class="section__title" data-i18n="process.title">Clear steps, no surprises</h2>
+          <p class="section__lead" data-i18n="process.lead">You always know what's happening, what it costs and what comes next.</p>
+        </header>
+
+        <ol class="process">
+          <li class="process__step reveal">
+            <span class="process__num">01</span>
+            <h3 data-i18n="p1.title">Discovery call</h3>
+            <p data-i18n="p1.text">A free 30-minute call. We talk about your goals, current setup and what success looks like.</p>
+          </li>
+          <li class="process__step reveal">
+            <span class="process__num">02</span>
+            <h3 data-i18n="p2.title">Plan &amp; estimate</h3>
+            <p data-i18n="p2.text">You get a written scope, timeline and fixed or hourly price. No hidden costs.</p>
+          </li>
+          <li class="process__step reveal">
+            <span class="process__num">03</span>
+            <h3 data-i18n="p3.title">Build in iterations</h3>
+            <p data-i18n="p3.text">Weekly demos on a live preview link. You give feedback early, while changes are cheap.</p>
+          </li>
+          <li class="process__step reveal">
+            <span class="process__num">04</span>
+            <h3 data-i18n="p4.title">Launch &amp; support</h3>
+            <p data-i18n="p4.text">Deployment, monitoring and documentation. I stay around for fixes and the next features.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ About ============ -->
+    <section class="section" id="about">
+      <div class="container about">
+        <div class="about__text reveal">
+          <p class="eyebrow" data-i18n="about.eyebrow">About</p>
+          <h2 class="section__title" data-i18n="about.title">One developer, the whole stack, full responsibility</h2>
+          <p data-i18n="about.p1">For more than six years I've been building web products for startups, agencies and small businesses. You work directly with the person who writes the code: no account managers, no lost requirements.</p>
+          <p data-i18n="about.p2">My main stack is <strong>Next.js</strong> on the frontend, <strong>AdonisJS</strong> on the backend and <strong>PostgreSQL</strong> for data, which lets me move fast while keeping the codebase clean and easy to hand over.</p>
+          <ul class="checklist" data-i18n="about.list">
+            <li>Clean, typed and tested code</li>
+            <li>Honest estimates and regular updates</li>
+            <li>You own the code, repository and accounts</li>
+            <li>Documentation so any developer can continue</li>
+          </ul>
+        </div>
+
+        <div class="about__panel reveal">
+          <div class="stack-card">
+            <h3 data-i18n="about.stack">Core stack</h3>
+            <div class="stack-card__row">
+              <span>Frontend</span>
+              <div class="bar"><i style="--w: 95%"></i></div>
+              <em>Next.js · React · TS</em>
+            </div>
+            <div class="stack-card__row">
+              <span>Backend</span>
+              <div class="bar"><i style="--w: 90%"></i></div>
+              <em>AdonisJS · Node.js</em>
+            </div>
+            <div class="stack-card__row">
+              <span data-i18n="about.db">Database</span>
+              <div class="bar"><i style="--w: 88%"></i></div>
+              <em>PostgreSQL</em>
+            </div>
+            <div class="stack-card__row">
+              <span>DevOps</span>
+              <div class="bar"><i style="--w: 75%"></i></div>
+              <em>Docker · CI/CD</em>
+            </div>
+          </div>
+          <blockquote class="quote">
+            <p data-i18n="about.quote">“Good software should quietly do its job so you can focus on yours.”</p>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section section--alt" id="faq">
+      <div class="container container--narrow">
+        <header class="section__head section__head--center reveal">
+          <p class="eyebrow" data-i18n="faq.eyebrow">FAQ</p>
+          <h2 class="section__title" data-i18n="faq.title">Common questions</h2>
+        </header>
+
+        <div class="faq">
+          <details class="faq__item reveal">
+            <summary data-i18n="f1.q">How much does a project cost?</summary>
+            <p data-i18n="f1.a">It depends on scope. Small business websites start from a fixed price; larger products are estimated after the discovery call. You always get a written estimate before any work starts.</p>
+          </details>
+          <details class="faq__item reveal">
+            <summary data-i18n="f2.q">Can you take over a project another developer started?</summary>
+            <p data-i18n="f2.a">Yes, that's one of my core services. I start with a short code audit, tell you honestly what state it's in, and propose a plan to stabilize and continue it.</p>
+          </details>
+          <details class="faq__item reveal">
+            <summary data-i18n="f3.q">Do you work with stacks other than Next.js and Adonis?</summary>
+            <p data-i18n="f3.a">Yes. For support and optimization work I'm comfortable with most JavaScript/TypeScript and Node.js stacks, plus common SQL databases. For new builds I recommend my core stack because it's fast to develop and easy to maintain.</p>
+          </details>
+          <details class="faq__item reveal">
+            <summary data-i18n="f4.q">What happens after launch?</summary>
+            <p data-i18n="f4.a">You can choose a monthly support plan (fixes, updates, small features) or contact me as needed. Either way, you own everything and get documentation for it.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Contact ============ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact reveal">
+          <div class="contact__info">
+            <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
+            <h2 class="section__title" data-i18n="contact.title">Let's build something that moves your business forward</h2>
+            <p class="section__lead" data-i18n="contact.lead">Tell me a little about your project. I reply within 24 hours with next steps.</p>
+            <ul class="contact__links">
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                <a href="mailto:hello@example.com" id="contactEmail">hello@example.com</a>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>
+                <a href="https://github.com/sliceem88" target="_blank" rel="noopener">github.com/sliceem88</a>
+              </li>
+            </ul>
+          </div>
+
+          <form class="form" id="contactForm" novalidate>
+            <div class="form__row">
+              <div class="field">
+                <label for="name" data-i18n="form.name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" data-i18n-placeholder="form.namePh" placeholder="Jane Smith" required>
+                <span class="field__error" aria-live="polite"></span>
+              </div>
+              <div class="field">
+                <label for="email" data-i18n="form.email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" placeholder="jane@company.com" required>
+                <span class="field__error" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <fieldset class="field">
+              <legend data-i18n="form.need">What do you need?</legend>
+              <div class="pills">
+                <label class="pill"><input type="radio" name="service" value="s3" checked><span data-i18n="pill.s3">New project</span></label>
+                <label class="pill"><input type="radio" name="service" value="s2"><span data-i18n="pill.s2">Automation</span></label>
+                <label class="pill"><input type="radio" name="service" value="s4"><span data-i18n="pill.s4">Support &amp; extend</span></label>
+                <label class="pill"><input type="radio" name="service" value="s5"><span data-i18n="pill.s5">Optimization</span></label>
+                <label class="pill"><input type="radio" name="service" value="s1"><span data-i18n="pill.s1">Local business</span></label>
+                <label class="pill"><input type="radio" name="service" value="s6"><span data-i18n="pill.s6">Revive a project</span></label>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <label for="message" data-i18n="form.message">Project details</label>
+              <textarea id="message" name="message" rows="5" data-i18n-placeholder="form.messagePh" placeholder="A few words about your business, goals and timeline…" required></textarea>
+              <span class="field__error" aria-live="polite"></span>
+            </div>
+
+            <button class="btn btn--primary btn--lg btn--block" type="submit">
+              <span data-i18n="form.submit">Send message</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg>
+            </button>
+            <p class="form__status" id="formStatus" role="status"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#top" class="logo">
+        <span class="logo__mark" aria-hidden="true">&lt;/&gt;</span>
+        <span class="logo__text">Brightcode</span>
+      </a>
+      <p>© <span id="year">2026</span> Brightcode. <span data-i18n="footer.built">Built with plain HTML, CSS &amp; JS.</span></p>
+      <a href="#top" class="footer__top" data-i18n="footer.top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="i18n.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
