@@ -13,7 +13,7 @@ const fs = require('fs');
 const path = require('path');
 
 /* ---- Site settings: change these before going live ---- */
-const SITE_URL = 'https://example.com'; // no trailing slash
+const SITE_URL = 'https://averdemtech.lv'; // no trailing slash
 const BRAND = 'AVerDemTech';
 const EMAIL = 'averdemtech@gmail.com';
 const LANGS = ['lv', 'en', 'ru'];

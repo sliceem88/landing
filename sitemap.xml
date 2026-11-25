@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://example.com/</loc>
+    <loc>https://averdemtech.lv/</loc>
     <lastmod>2026-11-25</lastmod>
-    <xhtml:link rel="alternate" hreflang="lv" href="https://example.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://example.com/ru/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://example.com/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://averdemtech.lv/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://averdemtech.lv/en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://averdemtech.lv/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://averdemtech.lv/"/>
   </url>
   <url>
-    <loc>https://example.com/en/</loc>
+    <loc>https://averdemtech.lv/en/</loc>
     <lastmod>2026-11-25</lastmod>
-    <xhtml:link rel="alternate" hreflang="lv" href="https://example.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://example.com/ru/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://example.com/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://averdemtech.lv/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://averdemtech.lv/en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://averdemtech.lv/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://averdemtech.lv/"/>
   </url>
   <url>
-    <loc>https://example.com/ru/</loc>
+    <loc>https://averdemtech.lv/ru/</loc>
     <lastmod>2026-11-25</lastmod>
-    <xhtml:link rel="alternate" hreflang="lv" href="https://example.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://example.com/en/"/>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://example.com/ru/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://example.com/"/>
+    <xhtml:link rel="alternate" hreflang="lv" href="https://averdemtech.lv/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://averdemtech.lv/en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://averdemtech.lv/ru/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://averdemtech.lv/"/>
   </url>
 </urlset>
