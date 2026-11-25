@@ -36,7 +36,7 @@ and JSON-LD (`ProfessionalService` + `FAQPage`). The language switcher is a set 
 ## Before going live
 
 1. Set `SITE_URL`, `BRAND` and `EMAIL` at the top of `scripts/build.js`, and `CONTACT_EMAIL` in `script.js`, then rebuild.
-2. Replace the placeholder brand "Brightcode" in `src/i18n.js`, `src/template.html` and `og-image.png`.
+2. Replace the placeholder brand "AVerDemTech" in `src/i18n.js`, `src/template.html` and `og-image.png`.
 3. Adjust the sample hero numbers (40+ projects, Lighthouse 98, −12h/week) to real ones.
 4. Submit `https://your-domain/sitemap.xml` in Google Search Console (and Bing Webmaster Tools).
 5. The contact form opens the visitor's mail app (`mailto:`). To receive submissions directly,

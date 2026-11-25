@@ -1,5 +1,5 @@
 /* =========================================================
-   Brightcode landing — plain CSS
+   AVerDemTech landing — plain CSS
    ========================================================= */
 
 /* ---------- Tokens ---------- */
@@ -517,4 +517,15 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal { opacity: 1; transform: none; }
   .bar i { width: var(--w); }
+}
+
+@media (max-width: 380px) {
+  .header__inner { gap: 8px; }
+  .header__actions { gap: 6px; }
+  .logo { gap: 8px; }
+  .logo__mark { width: 30px; height: 30px; font-size: 11px; }
+  .logo__text { font-size: 15px; }
+  .icon-btn, .lang__btn { height: 36px; }
+  .icon-btn { width: 36px; }
+  .lang__btn { padding: 0 8px; }
 }

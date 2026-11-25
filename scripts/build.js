@@ -14,7 +14,7 @@ const path = require('path');
 
 /* ---- Site settings: change these before going live ---- */
 const SITE_URL = 'https://example.com'; // no trailing slash
-const BRAND = 'Brightcode';
+const BRAND = 'AVerDemTech';
 const EMAIL = 'hello@example.com';
 const LANGS = ['en', 'ru', 'lv'];
 const DEFAULT_LANG = 'en';

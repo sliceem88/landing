@@ -5,8 +5,8 @@
 (function (root) {
   var I18N = {
     "en": {
-      "meta.title": "Brightcode — Web Development Company | Websites, Web Apps & Automation",
-      "meta.description": "Brightcode is a web development company. We build websites and web apps from scratch, automate business processes, support and optimize existing projects, and help local businesses grow online.",
+      "meta.title": "AVerDemTech — Web Development Company | Websites, Web Apps & Automation",
+      "meta.description": "AVerDemTech is a web development company. We build websites and web apps from scratch, automate business processes, support and optimize existing projects, and help local businesses grow online.",
       "skip": "Skip to content",
       "aria.theme": "Toggle color theme",
       "aria.menu": "Open menu",
@@ -17,7 +17,7 @@
       "nav.cta": "Start a project",
       "hero.badge": "Taking on new projects",
       "hero.title": "Web development company that <span class=\"gradient-text\">builds for your growth</span>, not just for launch day.",
-      "hero.lead": "Brightcode is a web development company with 6+ years of hands-on experience. We build products from scratch, automate routine work, help local businesses get online and bring stalled projects back to life.",
+      "hero.lead": "AVerDemTech is a web development company with 6+ years of hands-on experience. We build products from scratch, automate routine work, help local businesses get online and bring stalled projects back to life.",
       "hero.cta": "Discuss your project",
       "hero.cta2": "See services",
       "hero.stat1": "years in web",
@@ -105,8 +105,8 @@
       "jsonld.service": "Web development"
     },
     "ru": {
-      "meta.title": "Brightcode — веб-разработка для бизнеса | Сайты, веб-приложения и автоматизация",
-      "meta.description": "Brightcode — компания по веб-разработке. Создаём сайты и веб-приложения с нуля, автоматизируем бизнес-процессы, поддерживаем и оптимизируем существующие проекты, помогаем локальному бизнесу расти онлайн.",
+      "meta.title": "AVerDemTech — веб-разработка для бизнеса | Сайты, веб-приложения и автоматизация",
+      "meta.description": "AVerDemTech — компания по веб-разработке. Создаём сайты и веб-приложения с нуля, автоматизируем бизнес-процессы, поддерживаем и оптимизируем существующие проекты, помогаем локальному бизнесу расти онлайн.",
       "skip": "Перейти к содержанию",
       "aria.theme": "Переключить тему",
       "aria.menu": "Открыть меню",
@@ -117,7 +117,7 @@
       "nav.cta": "Начать проект",
       "hero.badge": "Берём новые проекты",
       "hero.title": "Веб-разработка, которая <span class=\"gradient-text\">работает на рост бизнеса</span>, а не только на запуск.",
-      "hero.lead": "Brightcode — компания по веб-разработке с опытом более 6 лет. Создаём продукты с нуля, автоматизируем рутину, помогаем локальному бизнесу выйти в онлайн и возвращаем к жизни застрявшие проекты.",
+      "hero.lead": "AVerDemTech — компания по веб-разработке с опытом более 6 лет. Создаём продукты с нуля, автоматизируем рутину, помогаем локальному бизнесу выйти в онлайн и возвращаем к жизни застрявшие проекты.",
       "hero.cta": "Обсудить проект",
       "hero.cta2": "Смотреть услуги",
       "hero.stat1": "лет в вебе",
@@ -205,8 +205,8 @@
       "jsonld.service": "Веб-разработка"
     },
     "lv": {
-      "meta.title": "Brightcode — tīmekļa izstrādes uzņēmums | Mājaslapas, lietotnes un automatizācija",
-      "meta.description": "Brightcode ir tīmekļa izstrādes uzņēmums. Veidojam mājaslapas un tīmekļa lietotnes no nulles, automatizējam biznesa procesus, uzturam un optimizējam esošus projektus un palīdzam vietējiem uzņēmumiem augt tiešsaistē.",
+      "meta.title": "AVerDemTech — tīmekļa izstrādes uzņēmums | Mājaslapas, lietotnes un automatizācija",
+      "meta.description": "AVerDemTech ir tīmekļa izstrādes uzņēmums. Veidojam mājaslapas un tīmekļa lietotnes no nulles, automatizējam biznesa procesus, uzturam un optimizējam esošus projektus un palīdzam vietējiem uzņēmumiem augt tiešsaistē.",
       "skip": "Pāriet uz saturu",
       "aria.theme": "Pārslēgt krāsu tēmu",
       "aria.menu": "Atvērt izvēlni",
@@ -217,7 +217,7 @@
       "nav.cta": "Sākt projektu",
       "hero.badge": "Pieņemam jaunus projektus",
       "hero.title": "Tīmekļa izstrāde, kas <span class=\"gradient-text\">strādā jūsu izaugsmei</span>, ne tikai palaišanas dienai.",
-      "hero.lead": "Brightcode ir tīmekļa izstrādes uzņēmums ar vairāk nekā 6 gadu pieredzi. Veidojam produktus no nulles, automatizējam rutīnu, palīdzam vietējiem uzņēmumiem nonākt tiešsaistē un atdzīvinām iestrēgušus projektus.",
+      "hero.lead": "AVerDemTech ir tīmekļa izstrādes uzņēmums ar vairāk nekā 6 gadu pieredzi. Veidojam produktus no nulles, automatizējam rutīnu, palīdzam vietējiem uzņēmumiem nonākt tiešsaistē un atdzīvinām iestrēgušus projektus.",
       "hero.cta": "Apspriest projektu",
       "hero.cta2": "Skatīt pakalpojumus",
       "hero.stat1": "gadi tīmeklī",
