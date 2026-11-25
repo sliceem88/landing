@@ -16,8 +16,8 @@ const path = require('path');
 const SITE_URL = 'https://example.com'; // no trailing slash
 const BRAND = 'AVerDemTech';
 const EMAIL = 'averdemtech@gmail.com';
-const LANGS = ['en', 'ru', 'lv'];
-const DEFAULT_LANG = 'en';
+const LANGS = ['lv', 'en', 'ru'];
+const DEFAULT_LANG = 'lv';
 /* ------------------------------------------------------- */
 
 const ROOT = path.join(__dirname, '..');

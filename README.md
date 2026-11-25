@@ -17,7 +17,7 @@ npx serve .        # or: python3 -m http.server
 | `src/template.html` | Page markup. Translatable text is marked with `data-i18n="key"` |
 | `src/i18n.js` | All page text in English, Russian and Latvian |
 | `scripts/build.js` | Generates the static pages, `sitemap.xml` and `robots.txt` (Node, zero dependencies) |
-| `index.html`, `ru/index.html`, `lv/index.html` | Generated pages. Don't edit these directly |
+| `index.html` (Latvian, default), `en/index.html`, `ru/index.html` | Generated pages. Don't edit these directly |
 | `styles.css`, `script.js` | Styles and behaviour shared by all pages |
 | `favicon.svg`, `apple-touch-icon.png`, `og-image.png` | Icons and social preview image |
 
@@ -30,7 +30,7 @@ node scripts/build.js
 ## Why one page per language
 
 Search engines index one language per URL. Each language therefore has its own fully translated static page
-(`/`, `/ru/`, `/lv/`) with its own title, description, canonical link, `hreflang` alternates, Open Graph tags
+(`/` Latvian, `/en/`, `/ru/`) with its own title, description, canonical link, `hreflang` alternates, Open Graph tags
 and JSON-LD (`ProfessionalService` + `FAQPage`). The language switcher is a set of normal links.
 
 ## Before going live
