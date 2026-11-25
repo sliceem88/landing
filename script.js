@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var CONTACT_EMAIL = 'hello@example.com'; // TODO: replace with your real address
+  var CONTACT_EMAIL = 'averdemtech@gmail.com';
   var root = document.documentElement;
 
   function store(key, value) {
