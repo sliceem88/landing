@@ -86,7 +86,7 @@
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
     // Stagger siblings inside grids
-    document.querySelectorAll('.services, .process, .faq').forEach(function (group) {
+    document.querySelectorAll('.services, .process, .faq, .highlights').forEach(function (group) {
       Array.prototype.forEach.call(group.children, function (child, i) {
         child.style.transitionDelay = (i * 70) + 'ms';
       });
@@ -167,6 +167,31 @@
     statusEl.textContent = t('ok');
     form.reset();
   });
+
+  /* ---------------- Tech marquee: seamless infinite loop ---------------- */
+  // Clone the item group until the track is at least one group wider than the strip,
+  // then scroll by exactly one group width so the loop never shows a gap.
+  var track = document.querySelector('.marquee__track');
+  if (track) {
+    var group = track.querySelector('.marquee__group');
+    var fillMarquee = function () {
+      track.querySelectorAll('.marquee__group[aria-hidden]').forEach(function (g) { g.remove(); });
+      var groupW = group.getBoundingClientRect().width;
+      if (!groupW) return;
+      var needed = Math.ceil(track.parentElement.clientWidth / groupW) + 1;
+      for (var i = 0; i < needed; i++) {
+        var clone = group.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        track.appendChild(clone);
+      }
+      track.style.setProperty('--marquee-shift', groupW + 'px');
+      track.style.setProperty('--marquee-duration', Math.round(groupW / 60) + 's'); // ~60px per second
+    };
+    var resizeTimer;
+    window.addEventListener('resize', function () { clearTimeout(resizeTimer); resizeTimer = setTimeout(fillMarquee, 150); });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fillMarquee); else fillMarquee();
+    fillMarquee();
+  }
 
   /* ---------------- Footer year ---------------- */
   document.getElementById('year').textContent = new Date().getFullYear();
