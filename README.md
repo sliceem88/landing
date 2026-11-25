@@ -41,3 +41,17 @@ and JSON-LD (`ProfessionalService` + `FAQPage`). The language switcher is a set 
 4. Submit `https://your-domain/sitemap.xml` in Google Search Console (and Bing Webmaster Tools).
 5. The contact form opens the visitor's mail app (`mailto:`). To receive submissions directly,
    replace that block in `script.js` with a `fetch()` POST to your API.
+
+## Deploy (Cloudflare Workers)
+
+`wrangler.jsonc` serves this folder as static assets; `.assetsignore` keeps `src/`, `scripts/`, `.git` and config files private.
+
+In Cloudflare → Workers & Pages → Create → Import a repository:
+
+| Field | Value |
+| --- | --- |
+| Build command | `node scripts/build.js` |
+| Deploy command | `npx wrangler deploy` |
+| Preview command | keep the default |
+
+Check locally with `npx wrangler dev`.
