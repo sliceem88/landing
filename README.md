@@ -52,6 +52,6 @@ In Cloudflare → Workers & Pages → Create → Import a repository:
 | --- | --- |
 | Build command | `node scripts/build.js` |
 | Deploy command | `npx wrangler deploy` |
-| Preview command | `npx wrangler versions upload` |
+| Preview command | keep the default |
 
 Check locally with `npx wrangler dev`.
