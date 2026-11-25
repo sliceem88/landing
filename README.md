@@ -1,32 +1,43 @@
 # landing
 
-Single-page landing for a web development studio. Plain HTML, CSS and vanilla JS: no frameworks, no build step.
+Single-page landing for a web development company. Plain HTML, CSS and vanilla JS: no frameworks, no runtime dependencies.
 
 ## Run
 
-Open `index.html` in a browser, or serve the folder:
+Serve the folder (language links use folder URLs like `/ru/`, so a server works better than opening the file):
 
 ```bash
 npx serve .        # or: python3 -m http.server
 ```
 
-## Files
+## Structure
 
-- `index.html` – page markup (hero, services, process, about, FAQ, contact)
-- `styles.css` – all styles, dark/light themes, responsive breakpoints
-- `i18n.js` – translations for English, Russian and Latvian
-- `script.js` – language switcher, theme toggle, mobile menu, scroll reveal, contact form
+| Path | What it is |
+| --- | --- |
+| `src/template.html` | Page markup. Translatable text is marked with `data-i18n="key"` |
+| `src/i18n.js` | All page text in English, Russian and Latvian |
+| `scripts/build.js` | Generates the static pages, `sitemap.xml` and `robots.txt` (Node, zero dependencies) |
+| `index.html`, `ru/index.html`, `lv/index.html` | Generated pages. Don't edit these directly |
+| `styles.css`, `script.js` | Styles and behaviour shared by all pages |
+| `favicon.svg`, `apple-touch-icon.png`, `og-image.png` | Icons and social preview image |
 
-## Languages
+After changing text or markup, regenerate:
 
-Text is marked with `data-i18n="key"` (plus `data-i18n-placeholder` / `data-i18n-aria`).
-Add or edit strings in `i18n.js`. The language is picked from `?lang=ru`, then the saved choice,
-then the browser language, falling back to English.
+```bash
+node scripts/build.js
+```
+
+## Why one page per language
+
+Search engines index one language per URL. Each language therefore has its own fully translated static page
+(`/`, `/ru/`, `/lv/`) with its own title, description, canonical link, `hreflang` alternates, Open Graph tags
+and JSON-LD (`ProfessionalService` + `FAQPage`). The language switcher is a set of normal links.
 
 ## Before going live
 
-- Brand name **Brightcode** is a placeholder: search and replace it in `index.html` and `i18n.js`.
-- Set your email in `CONTACT_EMAIL` at the top of `script.js`.
-- The contact form opens the visitor's mail app (`mailto:`). To receive submissions directly,
-  replace that block in `script.js` with a `fetch()` POST to your API or a form service.
-- Hero stats (40+ projects, Lighthouse 98, etc.) are sample numbers: adjust to your real ones.
+1. Set `SITE_URL`, `BRAND` and `EMAIL` at the top of `scripts/build.js`, and `CONTACT_EMAIL` in `script.js`, then rebuild.
+2. Replace the placeholder brand "Brightcode" in `src/i18n.js`, `src/template.html` and `og-image.png`.
+3. Adjust the sample hero numbers (40+ projects, Lighthouse 98, −12h/week) to real ones.
+4. Submit `https://your-domain/sitemap.xml` in Google Search Console (and Bing Webmaster Tools).
+5. The contact form opens the visitor's mail app (`mailto:`). To receive submissions directly,
+   replace that block in `script.js` with a `fetch()` POST to your API.

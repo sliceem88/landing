@@ -195,14 +195,15 @@ svg { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round
   transition: opacity .18s ease, transform .18s ease, visibility .18s;
 }
 .lang.is-open .lang__menu { opacity: 1; visibility: visible; transform: none; }
-.lang__menu button {
+.lang__menu a {
+  color: var(--text); 
   width: 100%; display: flex; justify-content: space-between; align-items: center;
   padding: 9px 12px; border: 0; background: none; border-radius: 9px; text-align: left; font-size: 14px;
 }
-.lang__menu button span { color: var(--muted); font-size: 12px; font-weight: 600; }
-.lang__menu button:hover { background: var(--surface-2); }
-.lang__menu button[aria-selected="true"] { background: var(--accent-soft); color: var(--accent); }
-.lang__menu button[aria-selected="true"] span { color: var(--accent); }
+.lang__menu a span { color: var(--muted); font-size: 12px; font-weight: 600; }
+.lang__menu a:hover { background: var(--surface-2); }
+.lang__menu a[aria-current="page"] { background: var(--accent-soft); color: var(--accent); }
+.lang__menu a[aria-current="page"] span { color: var(--accent); }
 
 /* Burger */
 .burger { display: none; flex-direction: column; align-items: center; justify-content: center; gap: 4px; }

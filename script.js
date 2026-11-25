@@ -2,7 +2,6 @@
   'use strict';
 
   var CONTACT_EMAIL = 'hello@example.com'; // TODO: replace with your real address
-  var SUPPORTED = ['en', 'ru', 'lv'];
   var root = document.documentElement;
 
   function store(key, value) {
@@ -12,59 +11,8 @@
     } catch (e) { return null; }
   }
 
-  /* ---------------- i18n ---------------- */
-  var dict = window.I18N || {};
-  var lang = 'en';
-
-  function t(key) {
-    return (dict[lang] && dict[lang][key]) || (dict.en && dict.en[key]) || '';
-  }
-
-  function detectLang() {
-    var fromUrl = new URLSearchParams(location.search).get('lang');
-    if (SUPPORTED.indexOf(fromUrl) > -1) return fromUrl;
-    var saved = store('lang');
-    if (SUPPORTED.indexOf(saved) > -1) return saved;
-    var nav = (navigator.languages || [navigator.language || 'en']);
-    for (var i = 0; i < nav.length; i++) {
-      var code = String(nav[i]).slice(0, 2).toLowerCase();
-      if (SUPPORTED.indexOf(code) > -1) return code;
-    }
-    return 'en';
-  }
-
-  function applyLang(next) {
-    lang = SUPPORTED.indexOf(next) > -1 ? next : 'en';
-    root.lang = lang;
-
-    document.querySelectorAll('[data-i18n]').forEach(function (el) {
-      var v = t(el.getAttribute('data-i18n'));
-      if (v) el.innerHTML = v;
-    });
-    document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
-      el.setAttribute('placeholder', t(el.getAttribute('data-i18n-placeholder')));
-    });
-    document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
-      el.setAttribute('aria-label', t(el.getAttribute('data-i18n-aria')));
-    });
-
-    document.title = t('meta.title');
-    var desc = document.querySelector('meta[name="description"]');
-    if (desc) desc.setAttribute('content', t('meta.description'));
-
-    document.getElementById('langCurrent').textContent = lang.toUpperCase();
-    document.querySelectorAll('[data-lang]').forEach(function (b) {
-      b.setAttribute('aria-selected', String(b.getAttribute('data-lang') === lang));
-    });
-
-    // Clear stale validation messages in the old language
-    document.querySelectorAll('.field.is-invalid').forEach(function (f) { f.classList.remove('is-invalid'); });
-    var status = document.getElementById('formStatus');
-    if (status) status.textContent = '';
-
-    store('lang', lang);
-  }
-
+  /* ---------------- Language menu ---------------- */
+  // Each language is its own static page (/, /ru/, /lv/), so switching is a plain link.
   var langWrap = document.getElementById('lang');
   var langBtn = document.getElementById('langBtn');
 
@@ -72,17 +20,9 @@
     langWrap.classList.toggle('is-open', open);
     langBtn.setAttribute('aria-expanded', String(open));
   }
-
   langBtn.addEventListener('click', function (e) {
     e.stopPropagation();
     setLangMenu(!langWrap.classList.contains('is-open'));
-  });
-  document.querySelectorAll('[data-lang]').forEach(function (b) {
-    b.addEventListener('click', function () {
-      applyLang(b.getAttribute('data-lang'));
-      setLangMenu(false);
-      langBtn.focus();
-    });
   });
   document.addEventListener('click', function (e) {
     if (!langWrap.contains(e.target)) setLangMenu(false);
@@ -90,8 +30,6 @@
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') { setLangMenu(false); setNav(false); }
   });
-
-  applyLang(detectLang());
 
   /* ---------------- Theme ---------------- */
   document.getElementById('themeToggle').addEventListener('click', function () {
@@ -181,6 +119,7 @@
   document.getElementById('contactEmail').textContent = CONTACT_EMAIL;
 
   var form = document.getElementById('contactForm');
+  function t(key) { return form.getAttribute('data-' + key) || ''; }
   var statusEl = document.getElementById('formStatus');
   var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
@@ -193,9 +132,9 @@
 
   function validate() {
     var ok = true;
-    ok = setError(form.name, form.name.value.trim() ? '' : t('form.errName')) && ok;
-    ok = setError(form.email, emailRe.test(form.email.value.trim()) ? '' : t('form.errEmail')) && ok;
-    ok = setError(form.message, form.message.value.trim().length >= 10 ? '' : t('form.errMessage')) && ok;
+    ok = setError(form.name, form.name.value.trim() ? '' : t('err-name')) && ok;
+    ok = setError(form.email, emailRe.test(form.email.value.trim()) ? '' : t('err-email')) && ok;
+    ok = setError(form.message, form.message.value.trim().length >= 10 ? '' : t('err-message')) && ok;
     return ok;
   }
 
@@ -213,9 +152,8 @@
       if (firstBad) firstBad.focus();
       return;
     }
-    var serviceKey = form.querySelector('input[name="service"]:checked').value;
-    var serviceLabel = t('pill.' + serviceKey).replace(/&amp;/g, '&');
-    var subject = t('form.subject') + ': ' + serviceLabel;
+    var serviceLabel = form.querySelector('input[name="service"]:checked').nextElementSibling.textContent;
+    var subject = t('subject') + ': ' + serviceLabel;
     var body =
       form.message.value.trim() + '\n\n— ' +
       form.name.value.trim() + ' <' + form.email.value.trim() + '>';
@@ -226,7 +164,7 @@
       '?subject=' + encodeURIComponent(subject) +
       '&body=' + encodeURIComponent(body);
 
-    statusEl.textContent = t('form.ok');
+    statusEl.textContent = t('ok');
     form.reset();
   });
 
